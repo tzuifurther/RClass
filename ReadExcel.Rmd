@@ -3,8 +3,8 @@ title: "Read Excel"
 author: "David Lin"
 date: "2023-07-20"
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -23,8 +23,8 @@ install.packages('openxlsx')
 
 Read the file
 
-```{r}
-library(openxlsx);
+```{r message=FALSE, warning=FALSE}
+library(openxlsx, quietly = TRUE)
 
 data <- read.xlsx('cars.xlsx') #read the simple file
 
