@@ -24,7 +24,7 @@ install.packages('openxlsx')
 Read the file
 
 ```{r message=FALSE, warning=FALSE}
-library(openxlsx, quietly = TRUE)
+library(openxlsx)
 
 data <- read.xlsx('cars.xlsx') #read the simple file
 
