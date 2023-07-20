@@ -1,0 +1,18 @@
+---
+title: "Install package"
+author: "David Lin"
+date: "2023-07-20"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install package
+
+This command is to install package
+
+```
+install.packages()
+```
