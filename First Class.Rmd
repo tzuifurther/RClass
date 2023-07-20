@@ -1,0 +1,33 @@
+---
+title: "First Class"
+author: "David Lin"
+date: "2023-07-20"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install package
+
+This command is to install package
+
+```
+install.packages()
+```
+
+## Beeswam
+### Install package
+
+```
+install.packages('beeswam')
+```
+### sample code
+```{r}
+data <- sample(300) #generate sample data
+library(beeswarm)
+beeswarm(data)
+```
+
+ 
