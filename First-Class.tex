@@ -101,47 +101,87 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={ReadExcel},
+  pdftitle={First Class},
   pdfauthor={David Lin},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{ReadExcel}
+\title{First Class}
 \author{David Lin}
 \date{2023-07-20}
 
 \begin{document}
 \maketitle
 
+\hypertarget{basic-usage}{%
+\subsection{Basic usage}\label{basic-usage}}
+
+\hypertarget{summary-data}{%
+\subsubsection{summary data}\label{summary-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\FunctionTok{summary}\NormalTok{(data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    1.00   25.75   50.50   50.50   75.25  100.00
+\end{verbatim}
+
+\hypertarget{beeswam}{%
+\subsection{Beeswam}\label{beeswam}}
+
 \hypertarget{install-package}{%
-\subsection{Install package}\label{install-package}}
-
-Require install the \texttt{openxlsx} package.
+\subsubsection{Install package}\label{install-package}}
 
 \begin{verbatim}
-install.packages('openxlsx')
+install.packages('beeswam')
 \end{verbatim}
 
-\hypertarget{read-xlsx-file}{%
-\subsection{Read xlsx file}\label{read-xlsx-file}}
-
-Read the file
+\hypertarget{sample-code}{%
+\subsubsection{sample code}\label{sample-code}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(openxlsx)}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{sample}\NormalTok{(}\DecValTok{300}\NormalTok{) }\CommentTok{\#generate sample data}
+\FunctionTok{library}\NormalTok{(beeswarm)}
+\FunctionTok{beeswarm}\NormalTok{(data) }\CommentTok{\# plot beeswarm}
 \end{Highlighting}
 \end{Shaded}
 
+\includegraphics{First-Class_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{specific-color}{%
+\subsubsection{specific color}\label{specific-color}}
+
+\hypertarget{show-color}{%
+\paragraph{show color}\label{show-color}}
+
 \begin{verbatim}
-## Warning: 套件 'openxlsx' 是用 R 版本 4.3.1 來建造的
+colors()
 \end{verbatim}
+
+\hypertarget{select-color}{%
+\paragraph{select color}\label{select-color}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{read.xlsx}\NormalTok{(}\StringTok{\textquotesingle{}cars.xlsx\textquotesingle{}}\NormalTok{) }\CommentTok{\#read the simple file}
+\FunctionTok{beeswarm}\NormalTok{(data,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
+\includegraphics{First-Class_files/figure-latex/unnamed-chunk-3-1.pdf}
+\#\#\# Sign \includegraphics{images/r-basic-plotting-tools-pch-1.png}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{beeswarm}\NormalTok{(data,}\AttributeTok{pch=}\DecValTok{19}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{First-Class_files/figure-latex/unnamed-chunk-4-1.pdf}
 
 \end{document}

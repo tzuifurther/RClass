@@ -1,0 +1,39 @@
+---
+author: "David Lin"
+date: "2023-07-20"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install package
+
+
+```
+install.packages("ggpubr")
+```
+
+## sample demo
+
+```{r}
+data("ToothGrowth")
+head(ToothGrowth)
+
+library(ggpubr)
+compare_means(formula, data, method = "wilcox.test", paired = FALSE,
+  group.by = NULL, ref.group = NULL, ...)
+
+p <- ggboxplot(ToothGrowth, x = "supp", y = "len",
+          color = "supp", palette = "jco",
+          add = "jitter")
+
+p + stat_compare_means()
+# Change method
+p + stat_compare_means(method = "t.test")
+```
+
+

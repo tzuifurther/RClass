@@ -3,12 +3,19 @@ title: "First Class"
 author: "David Lin"
 date: "2023-07-20"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Basic usage
+### summary data
+```{r}
+data <- sample(100) #generate sample data
+summary(data)
 ```
 
 ## Beeswam

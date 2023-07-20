@@ -1,10 +1,10 @@
 ---
-title: "ReadExcel"
+title: "Read Excel"
 author: "David Lin"
 date: "2023-07-20"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -24,7 +24,7 @@ install.packages('openxlsx')
 Read the file
 
 ```{r}
-library(openxlsx)
+library(openxlsx);
 
 data <- read.xlsx('cars.xlsx') #read the simple file
 
