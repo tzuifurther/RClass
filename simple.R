@@ -6,4 +6,8 @@ data <- read.xlsx('cars.xlsx')
 
 beeswarm(data,col=c("blue","red"))
 
-beeswarm(data,col=c("blue","red"),pch=c(8,9))
+
+beeswarm(data,
+         col=c("blue","red"),
+         pch=c(11,19)
+         )
